@@ -208,6 +208,18 @@ export default class Main extends Component {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
+  deleteColumn = (columnId) => {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+    delete tasks[columnId];
+
+    this.setState({
+      ...this.state,
+      tasks
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
   // flag set in state to open form for adding a list
   setEditing(columnEditing) {
     this.setState({
@@ -240,19 +252,22 @@ export default class Main extends Component {
   }
 
   render() {
-    const tasks = this.state.tasks.map((task, index) => (
-      <div className="transparent-wrapper" key={index} onDragOver={this.handleDragOver} onDrop={(e) => this.handleDrop(e, task.id)}>
-        <li className="column-wrapper z-depth-3">
-          <Column {...task}
-            setCardDimention={this.setCardDimention}
-            updateCardContent={this.updateCardContent}
-            handleCardDragStart={(e) => this.handleCardDragStart(e, task.id)}
-            addNewCard={this.addNewCard}
-            deleteTask={this.deleteTask}
-          />
-        </li>
-      </div>
-    ));
+    const tasks = this.state.tasks.map((task, index) => {
+      return task ? (
+        <div className="transparent-wrapper" key={index} onDragOver={this.handleDragOver} onDrop={(e) => this.handleDrop(e, task.id)}>
+          <li className="column-wrapper z-depth-3">
+            <Column {...task}
+              setCardDimention={this.setCardDimention}
+              updateCardContent={this.updateCardContent}
+              handleCardDragStart={(e) => this.handleCardDragStart(e, task.id)}
+              addNewCard={this.addNewCard}
+              deleteTask={this.deleteTask}
+              deleteColumn={() => this.deleteColumn(task.id)}
+            />
+          </li>
+        </div>
+      ) : null;
+    });
 
     const addColumn = this.state.columnEditing ? (
       <div>

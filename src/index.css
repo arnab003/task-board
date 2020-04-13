@@ -50,7 +50,7 @@ code {
 .column-wrapper {
   background: #fff;
   margin-bottom: 10px;
-  padding: 18px;
+  padding: 0 15px 15px 18px;
   min-width: 250px;
   max-width: 300px;
   border-radius: 5px;
@@ -111,6 +111,16 @@ code {
   float: left;
 }
 
+.partition {
+  background: black;
+  margin: 5px 0 15px 0;
+  padding: 1px 0 1px 0;
+  opacity: 0.2;
+  border-radius: 5px;
+  width: 105%;
+  float: left;
+}
+
 .add-column-form {
   padding: 10px;
   box-shadow: 2px 2px 10px 1px #888888;
@@ -125,6 +135,23 @@ code {
   float: left;
   margin: 6px auto;
   padding: 5px;
+  cursor: pointer;
+  color: #546e7a;
+}
+
+.column-header {
+  margin: 0 auto;
+  padding: 5px;
+  word-wrap: break-word;
+  width: 90%;
+  float: left;
+}
+
+.column-header-del {
+  width: 10%;
+  float: left;
+  margin: -5px auto;
+  padding: 0;
   cursor: pointer;
   color: #546e7a;
 }
