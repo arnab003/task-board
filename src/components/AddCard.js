@@ -26,7 +26,7 @@ export default class AddCard extends Component {
     if (!this.state.editing) {
       return (
         <div onClick={() => this.setEditing(true)}>
-          <a className="waves-effect waves-light btn-small light-green darken-2"><i className="material-icons left">add</i>Add Task</a>
+          <a href="/" className="waves-effect waves-light btn-small light-green darken-2"><i className="material-icons left">add</i>Add Task</a>
         </div>
       );
     }

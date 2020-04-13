@@ -70,7 +70,7 @@ class Card extends Component {
         >
           {card.content}
         </div>
-        <div onClick={this.deleteTask}><a className="del-task" title="Delete Task"><i className="small material-icons">delete_forever</i></a></div>
+        <div onClick={this.deleteTask}><a href="/" className="del-task" title="Delete Task"><i className="small material-icons">delete_forever</i></a></div>
       </div>
     );
   }
