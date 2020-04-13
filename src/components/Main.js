@@ -264,7 +264,7 @@ export default class Main extends Component {
       </div>
     ) : (
         <div onClick={() => this.setEditing(true)}>
-          <a href="/" className="btn-floating btn waves-effect waves-light light-green darken-2 z-depth-2"><i className="material-icons">add</i></a>
+          <a className="btn-floating btn waves-effect waves-light light-green darken-2 z-depth-2"><i className="material-icons">add</i></a>
         </div>
       );
 
