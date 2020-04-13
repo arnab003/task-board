@@ -19,12 +19,12 @@ export default class Main extends Component {
           column: 'ToDo',
           id: 0,
           cards: [{
-            content: 'default Task 1 card is here',
+            content: 'Sample Task 1',
             columnId: 0,
             id: 0
           },
           {
-            content: 'Task 2',
+            content: 'Sample Task 2',
             columnId: 0,
             id: 1
           }]
@@ -33,7 +33,7 @@ export default class Main extends Component {
           column: 'InProgress',
           id: 1,
           cards: [{
-            content: 'Task 3',
+            content: 'Sample Task 3',
             columnId: 1,
             id: 2
           }]
@@ -42,7 +42,7 @@ export default class Main extends Component {
           column: 'Done',
           id: 2,
           cards: [{
-            content: 'Task 4',
+            content: 'Sample Task 4',
             columnId: 2,
             id: 3
           }]
