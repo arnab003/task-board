@@ -41,6 +41,12 @@ code {
   list-style-type: none;
 }
 
+.transparent-wrapper {
+  height: 85vh;
+  margin: 0;
+  padding: 0;
+}
+
 .column-wrapper {
   background: #fff;
   margin-bottom: 10px;

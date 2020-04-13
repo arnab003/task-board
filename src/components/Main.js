@@ -241,15 +241,17 @@ export default class Main extends Component {
 
   render() {
     const tasks = this.state.tasks.map((task, index) => (
-      <li className="column-wrapper z-depth-3" key={index} onDragOver={this.handleDragOver} onDrop={(e) => this.handleDrop(e, task.id)}>
-        <Column {...task}
-          setCardDimention={this.setCardDimention}
-          updateCardContent={this.updateCardContent}
-          handleCardDragStart={(e) => this.handleCardDragStart(e, task.id)}
-          addNewCard={this.addNewCard}
-          deleteTask={this.deleteTask}
-        />
-      </li>
+      <div className="transparent-wrapper" key={index} onDragOver={this.handleDragOver} onDrop={(e) => this.handleDrop(e, task.id)}>
+        <li className="column-wrapper z-depth-3">
+          <Column {...task}
+            setCardDimention={this.setCardDimention}
+            updateCardContent={this.updateCardContent}
+            handleCardDragStart={(e) => this.handleCardDragStart(e, task.id)}
+            addNewCard={this.addNewCard}
+            deleteTask={this.deleteTask}
+          />
+        </li>
+      </div>
     ));
 
     const addColumn = this.state.columnEditing ? (
